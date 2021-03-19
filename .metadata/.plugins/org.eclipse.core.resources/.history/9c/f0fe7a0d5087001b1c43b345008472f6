@@ -1,0 +1,22 @@
+package com.formacionbdi.microservicios.app.cursos.models.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "cursos_alumnos")
+public class CursoAlumno {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String id;
+	
+	@Column(name = "alumno_id", unique = true)
+	private Long alumnoId;
+	
+	private Curso curso;
+}

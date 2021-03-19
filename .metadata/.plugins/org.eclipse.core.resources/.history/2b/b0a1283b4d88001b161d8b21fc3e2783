@@ -1,0 +1,62 @@
+package com.formacionbdi.microservicios.app.respuestas.models.entity;
+
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.formacionbdi.microservicios.commons.alumnos.models.entity.Alumno;
+import com.formacionbdi.microservicios.commons.examenes.models.entity.Pregunta;
+
+@Document(collection = "respuestas")
+public class Respuesta {
+
+	private Long id;
+	
+	private String texto;
+
+	private Pregunta pregunta;
+	
+	private Alumno alumno;
+	
+	private Long alumnoId;
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
+	public String getTexto() {
+		return texto;
+	}
+	
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+
+	public Pregunta getPregunta() {
+		return pregunta;
+	}
+
+	public void setPregunta(Pregunta pregunta) {
+		this.pregunta = pregunta;
+	}
+
+	public Alumno getAlumno() {
+		return alumno;
+	}
+
+	public void setAlumno(Alumno alumno) {
+		this.alumno = alumno;
+	}
+
+	public Long getAlumnoId() {
+		return alumnoId;
+	}
+
+	public void setAlumnoId(Long alumnoId) {
+		this.alumnoId = alumnoId;
+	}
+	
+	
+}

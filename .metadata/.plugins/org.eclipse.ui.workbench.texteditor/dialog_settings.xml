@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="452"/>
+		<item key="DIALOG_Y_ORIGIN" value="247"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="List&lt;Respuesta&gt; respuestasAlumno = (List&lt;Respuesta&gt;) repository.findByAlumnoId(alumnoId);"/>
+		<list key="findhistory">
+			<item value="List&lt;Respuesta&gt; respuestasAlumno = (List&lt;Respuesta&gt;) repository.findByAlumnoId(alumnoId);"/>
+			<item value="@Query(&quot;select r from Respuesta r join fetch r.pregunta p join fetch p.examen e where r.alumnoId=?1 and e.id=?2&quot;)"/>
+			<item value=""/>
+		</list>
+	</section>
+</section>

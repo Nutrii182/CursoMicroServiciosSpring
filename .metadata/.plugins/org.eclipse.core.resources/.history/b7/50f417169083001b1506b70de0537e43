@@ -1,0 +1,5 @@
+package com.formacionbdi.microservicios.commons.examenes.models.entity;
+
+public class Asignatura {
+
+}

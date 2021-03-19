@@ -1,0 +1,13 @@
+package com.formacionbdi.microservicios.app.respuestas.app.respuestas.services;
+
+import com.formacionbdi.microservicios.app.respuestas.models.entity.Respuesta;
+
+public class RespuestaServiceImpl implements RespuestaService {
+
+	@Override
+	public Iterable<Respuesta> saveAll(Iterable<Respuesta> respuestas) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
