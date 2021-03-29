@@ -1,0 +1,19 @@
+<div class="card text-dark bg-light mb-3">
+    <div *ngIf="!model.id" class="card-header">Crear Curso</div>
+    <div *ngIf="model.id" class="card-header">Editar Curso</div>
+    <div class="card-body">
+        <button class="btn btn-secondary my-2" routerLink="/cursos">Regresar</button>
+
+        <form>
+            <div class="form-group">
+                <label form="nombre">Nombre</label>
+                <input type="text" name="nombre" class="form-control" [(ngModel)]="model.nombre" id="nombre">
+                <div class="alert alert-danger" *ngIf="error?.nombre">{{error.nombre}}</div>
+            </div>
+            <br>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" (click)="model.id ? editar() : crear()">{{model.id? 'Editar' : 'Crear'}}</button>
+            </div>
+        </form>
+    </div>
+</div>

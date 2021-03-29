@@ -1,0 +1,33 @@
+<div class="card text-dark bg-light mb-3">
+    <div *ngIf="!model.id" class="card-header">Crear Alumno</div>
+    <div *ngIf="model.id" class="card-header">Editar Alumno</div>
+    <div class="card-body">
+        <button class="btn btn-secondary my-2" routerLink="/alumnos">Regresar</button>
+
+        <form>
+            <div class="form-group">
+                <label form="nombre">Nombre</label>
+                <input type="text" name="nombre" class="form-control" [(ngModel)]="model.nombre" id="nombre">
+                <div class="alert alert-danger" *ngIf="error?.nombre">{{error.nombre}}</div>
+            </div>
+            <div class="form-group">
+                <label form="apellido">Apellido</label>
+                <input type="text" name="apellido" class="form-control" [(ngModel)]="model.apellido" id="apellido">
+                <div class="alert alert-danger" *ngIf="error?.apellido">{{error.apellido}}</div>
+            </div>
+            <div class="form-group">
+                <label form="email">Email</label>
+                <input type="text" name="email" class="form-control" [(ngModel)]="model.email" id="email">
+                <div class="alert alert-danger" *ngIf="error?.email">{{error.email}}</div>
+            </div>
+            <div class="form-group mb-3">
+                <label form="file" (change)="seleccionarFoto($event)">Subir Archivo</label>
+                <input class="form-control" type="file" id="formFile">
+              </div>
+            <br>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" (click)="model.id ? editar() : crear()">{{model.id? 'Editar' : 'Crear'}}</button>
+            </div>
+        </form>
+    </div>
+</div>
